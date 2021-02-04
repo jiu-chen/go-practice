@@ -1,5 +1,7 @@
 package main
 
+// 9*9 乘法表
+
 import (
 	"fmt"
 	"time"

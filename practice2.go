@@ -6,8 +6,8 @@ import (
 	"strconv"
 )
 
+// 计算最大公约数
 func getMaximumCommonDivisor(a, b int) int {
-	// 计算最大公约数
 	for a != b {
 		if a > b {
 			a = a - b
