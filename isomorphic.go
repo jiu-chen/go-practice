@@ -8,6 +8,15 @@ import (
 // 判断一个数 是否是同构数
 // 正整数n若是它平方数的尾部，则称n为同构数。
 
+// Power ...
+func Power(m, n int) int {
+	if n > 0 {
+		return m * Power(m, n-1)
+	}
+	return 1
+}
+
+
 // IsomorphicNum ...
 func IsomorphicNum(num int) bool {
 	lens := len(strconv.Itoa(num))
@@ -17,9 +26,9 @@ func IsomorphicNum(num int) bool {
 }
 
 func main() {
-	for i := 0; i < 10000; i++ {
+	for i := 1; i < 10000; i++ {
 		if IsomorphicNum(i) {
-			fmt.Printf("%d 是同构数.", i)
+			fmt.Printf("%d 是同构数\n", i)
 		}
 	}
 	fmt.Println()

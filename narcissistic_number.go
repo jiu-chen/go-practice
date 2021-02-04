@@ -13,6 +13,7 @@ func Power(m, n int) int {
 	return 1
 }
 
+
 func isNarcissisticNum(num int) bool {
 	i := num / 100
 	k := (num / 10) % 10
