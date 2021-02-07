@@ -16,7 +16,6 @@ func Power(m, n int) int {
 	return 1
 }
 
-
 // IsomorphicNum ...
 func IsomorphicNum(num int) bool {
 	lens := len(strconv.Itoa(num))
@@ -28,7 +27,7 @@ func IsomorphicNum(num int) bool {
 func main() {
 	for i := 1; i < 10000; i++ {
 		if IsomorphicNum(i) {
-			fmt.Printf("%d 是同构数\n", i)
+			fmt.Printf("%d 是同构数, %d的平方是%d\n", i, i, i*i)
 		}
 	}
 	fmt.Println()
