@@ -3,7 +3,8 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	"log"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
@@ -33,9 +34,22 @@ func main() {
 	for k, v := range countryCapitalMap {
 		result, err := db.Exec("INSERT INTO countryCapital(country, capital) VALUES(?,?)", k, v)
 		if err != nil {
-			log.Fatal(err)
 			fmt.Println(result, err)
 		}
 	}
 
 }
+
+/*
+创建数据库: CREATE DATABASE test;
+
+创建表：
+CREATE TABLE `countryCapital` (
+	id int primary KEY AUTO_INCREMENT,
+	country varchar(32),
+	capital varchar(32)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+*/
+
+// 下载驱动包:
+// go get github.com/go-sql-driver/mysql
