@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// FibonacciSequence ...
 func FibonacciSequence(n int) int {
 	if n <= 1 {
 		return 1
