@@ -1,3 +1,3 @@
 # GoPractice
 
-## 30 simple topics to learn Go.
+### 30 simple topics to learn Go.
