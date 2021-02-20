@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// IsSameSlice ...
 func IsSameSlice(m, n []int) bool {
 	if len(m) != len(n) {
 		return false
