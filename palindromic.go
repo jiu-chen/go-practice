@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"strconv"
 )
 
@@ -31,8 +30,13 @@ func IsPalindromic2(a string) bool {
 }
 
 func main() {
-	a := os.Args[1]
-	ia, _ := strconv.Atoi(a)
-	fmt.Printf("a is palindromic: %v\n", IsPalindromic(ia))
-	fmt.Printf("a is palindromic2: %v\n", IsPalindromic2(a))
+	var a int
+	fmt.Scanln(&a)
+	fmt.Print("input a: ")
+	_, err := fmt.Scanln(&a)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Printf("a is palindromic: %v\n", IsPalindromic(a))
+	fmt.Printf("a is palindromic2: %v\n", IsPalindromic2(strconv.Itoa(a)))
 }
