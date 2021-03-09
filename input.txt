@@ -1,0 +1,5 @@
+hello tom,
+this is a test file.
+this file contains secret.
+my own secret.
+do not tell anybody the secret.
